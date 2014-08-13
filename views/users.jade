@@ -1,0 +1,23 @@
+extends layout
+block content
+    h1 Users
+    .table-responsive
+        table.table.table-bordered.table-striped
+            thead
+                tr
+                    th First Name
+                    th Last Name
+                    th User Name
+                    th Email
+            tbody
+                - each item in users
+                    tr
+                        td= item.firstname
+                        td= item.lastname
+                        td= item.username
+                        td= item.email
+
+    a(href="/adduser") Add User
+
+
+

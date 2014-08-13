@@ -1,0 +1,25 @@
+extends layout
+block content
+
+
+        form(method="post")
+            h1 Add User
+            - if (errors)
+                p.errorMessage= "The following errors occurred:"
+                ul
+                    - each error in errors
+                        li= error.msg
+            label(for='firstname') First Name
+            input(type='text', id='firstname', name='firstname')
+            label(for='lastname') Last Name
+            input(type='text', id='lastname', name='lastname')
+            label(for='email') Email
+            input(type='email', id='email', name='email')
+            label(for='username') User Name
+            input(type='text', id='username', name='username')
+            label(for='password') Password
+            input(type='text', id='password', name='password')
+            p
+            button(type="submit")#btn-login.btn.btn-primary
+                | Add
+
